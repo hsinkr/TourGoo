@@ -1,4 +1,4 @@
-# TourRo(투어로)
+# TourGoo(투어고~)
 
 한국관광공사 TourAPI 기반 대한민국 여행정보 정적 웹앱입니다.
 
@@ -30,9 +30,9 @@ const SERVICE_KEY = "여기에_본인_한국관광공사_TourAPI_서비스키";
 ```bash
 git init
 git add .
-git commit -m "Initial TourRo project"
+git commit -m "Initial TourGoo project"
 git branch -M main
-git remote add origin https://github.com/본인아이디/TourRo.git
+git remote add origin https://github.com/본인아이디/TourGoo.git
 git push -u origin main
 ```
 
@@ -45,7 +45,7 @@ Settings → Pages → Branch: main → /root → Save
 배포 주소:
 
 ```text
-https://본인아이디.github.io/TourRo/
+https://본인아이디.github.io/TourGoo/
 ```
 
 ## 참고
