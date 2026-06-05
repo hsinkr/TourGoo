@@ -91,10 +91,12 @@ async function loadItems() {
       items = normalizeItems(body?.items?.item);
       totalCount = Number(body?.totalCount || 0);
     } catch (apiError) {
-      if (!USE_SAMPLE_WHEN_API_FAILS) throw apiError;
-      items = pageNo === 1 ? SAMPLE_ITEMS : [];
-      totalCount = SAMPLE_ITEMS.length;
-      console.warn(apiError);
+      //if (!USE_SAMPLE_WHEN_API_FAILS) throw apiError;
+      //items = pageNo === 1 ? SAMPLE_ITEMS : [];
+      //totalCount = SAMPLE_ITEMS.length;
+      //console.warn(apiError);
+      console.error(apiError);
+      throw apiError;
     }
 
     totalCountEl.innerText = totalCount.toLocaleString();
