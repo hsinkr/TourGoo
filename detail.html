@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>TourRo 상세보기</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="index.html">
+      <span class="logo">⌖</span>
+      <strong>TourRo(투어로)</strong>
+      <span class="brand-sub">관광지 | 맛집 | 둘레길 | 축제 | 숙박 등</span>
+    </a>
+    <div class="credit">ⓒProduced by You Seungoh<br>youtube.com/@pianocanvas | cafe music</div>
+  </header>
+
+  <main class="detail-wrap">
+    <a href="javascript:history.back()" class="back-link">← 목록으로</a>
+
+    <div id="detailLoading" class="loading">상세 정보를 불러오는 중입니다...</div>
+
+    <article id="detailContent" class="hidden">
+      <img id="detailImage" class="detail-image" src="" alt="상세 이미지" />
+
+      <h1 id="detailTitle"></h1>
+      <p id="detailAddr" class="detail-addr"></p>
+
+      <section class="detail-box">
+        <h3>☰ 소개</h3>
+        <p id="detailOverview"></p>
+      </section>
+
+      <section id="infoBox" class="detail-box hidden">
+        <h3>✦ 이용 정보</h3>
+        <div id="detailInfo" class="info-grid"></div>
+      </section>
+
+      <section class="detail-box">
+        <h3>⌖ 위치</h3>
+        <p id="detailMapText"></p>
+        <div class="map-buttons">
+          <a id="kakaoMapBtn" class="kakao-btn" target="_blank" rel="noopener">카카오맵에서 보기</a>
+          <a id="naverMapBtn" class="naver-btn" target="_blank" rel="noopener">네이버지도에서 보기</a>
+        </div>
+      </section>
+    </article>
+  </main>
+
+  <script src="js/config.js"></script>
+  <script src="js/data.js"></script>
+  <script src="js/api.js"></script>
+  <script src="js/detail.js"></script>
+</body>
+</html>

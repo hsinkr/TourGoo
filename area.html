@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>TourRo 지역정보</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="index.html">
+      <span class="logo">⌖</span>
+      <strong>TourRo(투어로)</strong>
+      <span class="brand-sub">관광지 | 맛집 | 둘레길 | 축제 | 숙박 등</span>
+    </a>
+    <div class="credit">ⓒProduced by You Seungoh<br>youtube.com/@pianocanvas | cafe music</div>
+  </header>
+
+  <main>
+    <section class="area-hero" id="areaHero">
+      <a href="index.html" class="back-btn">← 목록</a>
+      <div>
+        <div id="areaIcon" class="area-icon"></div>
+        <h1 id="areaTitle"></h1>
+        <p id="areaDesc"></p>
+      </div>
+    </section>
+
+    <section id="sigunguFilter" class="filter-row"></section>
+
+    <section id="typeFilter" class="filter-row">
+      <button class="active" data-type="">⌘ 전체</button>
+      <button data-type="12">🏛 관광지</button>
+      <button data-type="39">🍴 맛집</button>
+      <button data-type="14">🏢 문화시설</button>
+      <button data-type="15">🎉 축제/행사</button>
+      <button data-type="32">🛏 숙박</button>
+      <button data-type="25">🚲 둘레길</button>
+      <button data-type="28">⚽ 레포츠</button>
+    </section>
+
+    <p class="count-text">총 <span id="totalCount">0</span>개 장소</p>
+
+    <main id="placeList" class="place-grid"></main>
+    <div class="more-wrap">
+      <button id="moreBtn" class="more-btn">더 보기</button>
+    </div>
+  </main>
+
+  <script src="js/config.js"></script>
+  <script src="js/data.js"></script>
+  <script src="js/api.js"></script>
+  <script src="js/area.js"></script>
+</body>
+</html>

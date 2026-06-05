@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>TourRo(투어로) - 대한민국 구석구석</title>
+  <meta name="description" content="한국관광공사 TourAPI 기반 대한민국 여행정보 서비스" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="index.html">
+      <span class="logo">⌖</span>
+      <strong>TourRo(투어로)</strong>
+      <span class="brand-sub">관광지 | 맛집 | 둘레길 | 축제 | 숙박 등</span>
+    </a>
+    <div class="credit">ⓒProduced by You Seungoh<br>youtube.com/@pianocanvas | cafe music</div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="badge">✣ 현지인 큐레이션</div>
+      <h1>어디로 떠날까요?</h1>
+      <h2>대한민국 구석구석</h2>
+      <p>17개 시도를 선택하거나 검색창으로 시군구를 찾아보세요.</p>
+    </section>
+
+    <section class="search-box">
+      <input id="searchInput" type="search" placeholder="시도 또는 시군구 이름으로 검색..." autocomplete="off" />
+      <div id="searchResult" class="search-result"></div>
+    </section>
+
+    <section class="area-section">
+      <h3>⌘ 시도 선택</h3>
+      <div id="areaList" class="area-grid"></div>
+    </section>
+  </main>
+
+  <footer>
+    TourRo(투어로) · 대한민국 전국 여행 가이드 · 데이터: 한국관광공사 TourAPI
+  </footer>
+
+  <script src="js/config.js"></script>
+  <script src="js/data.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
