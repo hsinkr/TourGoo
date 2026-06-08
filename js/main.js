@@ -43,7 +43,7 @@ function renderAreas(keyword = "") {
         background-repeat: no-repeat;
       `
       : `background: ${area.bg};`;
-
+/*
     return `
       <a class="area-card"
          href="area.html?areaCode=${area.code}&name=${encodeURIComponent(area.name)}"
@@ -55,6 +55,14 @@ function renderAreas(keyword = "") {
         </div>
       </a>
     `;
+    */
+    return `
+      <a class="area-card"
+         href="area.html?areaCode=${area.code}&name=${encodeURIComponent(area.name)}"
+         style="${bgStyle}"
+         title="${area.name}">
+      </a>
+    `;    
   }).join("");
 
   searchResult.innerHTML = normalized && filtered.length === 0
