@@ -17,7 +17,17 @@ const moreBtn = document.getElementById("moreBtn");
 document.getElementById("areaTitle").innerText = areaInfo?.name || areaName;
 document.getElementById("areaDesc").innerText = areaInfo?.desc || "";
 document.getElementById("areaIcon").innerText = areaInfo?.icon || "";
-areaHero.style.background = `${areaInfo?.bg || "linear-gradient(135deg,#333,#777)"}`;
+//areaHero.style.background = `${areaInfo?.bg || "linear-gradient(135deg,#333,#777)"}`;
+if (areaInfo?.bgImage) {
+  areaHero.style.background = `
+    linear-gradient(rgba(0,0,0,0.35), rgba(0,0,0,0.35)),
+    url('${areaInfo.bgImage}')
+  `;
+  areaHero.style.backgroundSize = "cover";
+  areaHero.style.backgroundPosition = "center";
+} else {
+  areaHero.style.background = areaInfo?.bg || "linear-gradient(135deg,#333,#777)";
+}
 
 async function loadSigungu() {
   const filter = document.getElementById("sigunguFilter");

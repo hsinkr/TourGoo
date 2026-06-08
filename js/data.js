@@ -1,21 +1,140 @@
 const AREAS = [
-  { code: 1, name: "서울", desc: "경복궁·한강·남산", icon: "🏙️", bg: "linear-gradient(135deg,#596270,#2f3542)" },
-  { code: 2, name: "인천", desc: "인천공항·차이나타운", icon: "✈️", bg: "linear-gradient(135deg,#2f80ed,#56ccf2)" },
-  { code: 3, name: "대전", desc: "엑스포·한밭수목원", icon: "🏢", bg: "linear-gradient(135deg,#8e9eab,#eef2f3)" },
-  { code: 4, name: "대구", desc: "동성로·서문시장", icon: "🌹", bg: "linear-gradient(135deg,#8e2de2,#4a00e0)" },
-  { code: 5, name: "광주", desc: "무등산·국립아시아문화전당", icon: "🌕", bg: "linear-gradient(135deg,#141e30,#243b55)" },
-  { code: 6, name: "부산", desc: "해운대·광안리", icon: "🌊", bg: "linear-gradient(135deg,#0052d4,#65c7f7,#9cecfb)" },
-  { code: 7, name: "울산", desc: "대왕암·간절곶", icon: "🌊", bg: "linear-gradient(135deg,#00c6ff,#0072ff)" },
-  { code: 8, name: "세종", desc: "세종호수공원·정부청사", icon: "🏛️", bg: "linear-gradient(135deg,#485563,#29323c)" },
-  { code: 31, name: "경기", desc: "수원화성·남이섬", icon: "🏯", bg: "linear-gradient(135deg,#4568dc,#b06ab3)" },
-  { code: 32, name: "강원", desc: "설악산·경포대", icon: "⛰️", bg: "linear-gradient(135deg,#11998e,#38ef7d)" },
-  { code: 33, name: "충북", desc: "단양팔경·청남대", icon: "🏞️", bg: "linear-gradient(135deg,#76b852,#8dc26f)" },
-  { code: 34, name: "충남", desc: "공주·부여·보령", icon: "⛩️", bg: "linear-gradient(135deg,#232526,#414345)" },
-  { code: 35, name: "경북", desc: "경주·안동하회마을", icon: "🏛️", bg: "linear-gradient(135deg,#334d50,#cbcaa5)" },
-  { code: 36, name: "경남", desc: "통영·거제·남해", icon: "🎵", bg: "linear-gradient(135deg,#1d976c,#93f9b9)" },
-  { code: 37, name: "전북", desc: "전주한옥마을·변산반도", icon: "🌅", bg: "linear-gradient(135deg,#614385,#516395)" },
-  { code: 38, name: "전남", desc: "여수밤바다·순천만", icon: "🌼", bg: "linear-gradient(135deg,#f7971e,#ffd200)" },
-  { code: 39, name: "제주", desc: "한라산·성산일출봉", icon: "🌸", bg: "linear-gradient(135deg,#00b09b,#96c93d)" }
+  { 
+    code: 1, 
+    name: "서울", 
+    desc: "경복궁·한강·남산", 
+    icon: "🏙️", 
+    bgImage: "images/areas/seoul.png",
+    bg: "linear-gradient(135deg,#596270,#2f3542)" 
+  },
+  { 
+    code: 2, 
+    name: "인천", 
+    desc: "인천공항·차이나타운", 
+    icon: "✈️", 
+    bgImage: "images/areas/incheon.png",
+    bg: "linear-gradient(135deg,#2f80ed,#56ccf2)" 
+  },
+  { 
+    code: 3, 
+    name: "대전", 
+    desc: "엑스포·한밭수목원", 
+    icon: "🏢", 
+    bgImage: "images/areas/daejeon.png",
+    bg: "linear-gradient(135deg,#8e9eab,#eef2f3)"
+  },
+  { 
+    code: 4, 
+    name: "대구", 
+    desc: "동성로·서문시장", 
+    icon: "🌹", 
+    bgImage: "images/areas/daegu.png",
+    bg: "linear-gradient(135deg,#8e2de2,#4a00e0)"
+  },
+  { 
+    code: 5, 
+    name: "광주", 
+    desc: "무등산·국립아시아문화전당", 
+    icon: "🌕", 
+    bgImage: "images/areas/gwangju.png",
+    bg: "linear-gradient(135deg,#141e30,#243b55)"
+  },
+  { 
+    code: 6, 
+    name: "부산", 
+    desc: "해운대·광안리", 
+    icon: "🌊", 
+    bgImage: "images/areas/busan.png",
+    bg: "linear-gradient(135deg,#0052d4,#65c7f7,#9cecfb)"
+  },
+  { 
+    code: 7, 
+    name: "울산", 
+    desc: "대왕암·간절곶", 
+    icon: "🌊", 
+    bgImage: "images/areas/ulsan.png",
+    bg: "linear-gradient(135deg,#00c6ff,#0072ff)"
+  },
+  { 
+    code: 8, 
+    name: "세종", 
+    desc: "세종호수공원·정부청사", 
+    icon: "🏛️", 
+    bgImage: "images/areas/sejong.png",
+    bg: "linear-gradient(135deg,#485563,#29323c)"
+  },
+  { 
+    code: 31, 
+    name: "경기", 
+    desc: "수원화성·남이섬", 
+    icon: "🏯", 
+    bgImage: "images/areas/gyeonggi.png",
+    bg: "linear-gradient(135deg,#4568dc,#b06ab3)"
+  },
+  { 
+    code: 32, 
+    name: "강원", 
+    desc: "설악산·경포대", 
+    icon: "⛰️", 
+    bgImage: "images/areas/gangwon.png",
+    bg: "linear-gradient(135deg,#11998e,#38ef7d)"
+  },
+  { 
+    code: 33, 
+    name: "충북", 
+    desc: "단양팔경·청남대", 
+    icon: "🏞️", 
+    bgImage: "images/areas/chungbuk.png",
+    bg: "linear-gradient(135deg,#76b852,#8dc26f)"
+  },
+  { 
+    code: 34, 
+    name: "충남", 
+    desc: "공주·부여·보령", 
+    icon: "⛩️", 
+    bgImage: "images/areas/chungnam.png",
+    bg: "linear-gradient(135deg,#232526,#414345)"
+  },
+  { 
+    code: 35, 
+    name: "경북", 
+    desc: "경주·안동하회마을", 
+    icon: "🏛️", 
+    bgImage: "images/areas/gyeongbuk.png",
+    bg: "linear-gradient(135deg,#334d50,#cbcaa5)"
+  },
+  { 
+    code: 36, 
+    name: "경남", 
+    desc: "통영·거제·남해", 
+    icon: "🎵", 
+    bgImage: "images/areas/gyeongnam.png",
+    bg: "linear-gradient(135deg,#1d976c,#93f9b9)"
+  },
+  { 
+    code: 37, 
+    name: "전북", 
+    desc: "전주한옥마을·변산반도", 
+    icon: "🌅", 
+    bgImage: "images/areas/jeonbuk.png",
+    bg: "linear-gradient(135deg,#614385,#516395)"
+  },
+  { 
+    code: 38, 
+    name: "전남", 
+    desc: "여수밤바다·순천만", 
+    icon: "🌼", 
+    bgImage: "images/areas/jeonnam.png",
+    bg: "linear-gradient(135deg,#f7971e,#ffd200)"
+  },
+  { 
+    code: 39, 
+    name: "제주", 
+    desc: "한라산·성산일출봉", 
+    icon: "🌸", 
+    bgImage: "images/areas/jeju.png",
+    bg: "linear-gradient(135deg,#00b09b,#96c93d)"
+  }
 ];
 
 const TYPE_NAMES = {
