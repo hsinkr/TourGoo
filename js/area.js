@@ -21,7 +21,7 @@ document.getElementById("areaIcon").innerText = areaInfo?.icon || "";
 if (areaInfo?.bgImage) {
   areaHero.style.background = `
     linear-gradient(rgba(0,0,0,0.35), rgba(0,0,0,0.35)),
-    url('${areaInfo.bgImage}')
+    url('./${areaInfo.bgImage}')
   `;
   areaHero.style.backgroundSize = "cover";
   areaHero.style.backgroundPosition = "center";
