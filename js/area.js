@@ -19,12 +19,13 @@ document.getElementById("areaDesc").innerText = areaInfo?.desc || "";
 document.getElementById("areaIcon").innerText = areaInfo?.icon || "";
 //areaHero.style.background = `${areaInfo?.bg || "linear-gradient(135deg,#333,#777)"}`;
 if (areaInfo?.bgImage) {
-  areaHero.style.background = `
-    linear-gradient(rgba(0,0,0,0.35), rgba(0,0,0,0.35)),
+  areaHero.style.backgroundImage = `
+    linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.45)),
     url('./${areaInfo.bgImage}')
   `;
   areaHero.style.backgroundSize = "cover";
-  areaHero.style.backgroundPosition = "center";
+  areaHero.style.backgroundPosition = "center center";
+  areaHero.style.backgroundRepeat = "no-repeat";
 } else {
   areaHero.style.background = areaInfo?.bg || "linear-gradient(135deg,#333,#777)";
 }
